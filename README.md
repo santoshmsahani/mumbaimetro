@@ -1,11 +1,11 @@
 # Mumbai Metro Android App
-##Academic Project 🎓
+## Academic Project 🎓
 
 ![Mumbai Metro App](https://github.com/santoshmsahani/mumbaimetro/blob/master/screenshots/0.png)
 
 Android App that provides the users with details related to Mumbai Metro. It helps Commuters to get details such as Schedule, Fare, Route and Maps.
 
-##Features
+## Features
 - Schedule
 - Fare and Route
 - Maps
