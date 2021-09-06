@@ -18,6 +18,8 @@ public class SelectLocationLine1Activity extends AppCompatActivity {
     String direction;
     ListView lstView;
 
+    ListViewAdapter listViewAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,22 +34,14 @@ public class SelectLocationLine1Activity extends AppCompatActivity {
         if(direction.equals("versova"))
         {
             String[] stations = getResources().getStringArray(R.array.versova_ghatkopar);
-            List<String> staList = Arrays.asList(stations);
-
-            ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-
-
-            lstView.setAdapter(adapter);
+            listViewAdapter = new ListViewAdapter(this, stations);
+            lstView.setAdapter(listViewAdapter);
         }
         if(direction.equals("ghatkopar"))
         {
             String[] stations = getResources().getStringArray(R.array.ghatkopar_versova);
-            List<String> staList = Arrays.asList(stations);
-
-            ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-
-
-            lstView.setAdapter(adapter);
+            listViewAdapter = new ListViewAdapter(this, stations);
+            lstView.setAdapter(listViewAdapter);
         }
 
 

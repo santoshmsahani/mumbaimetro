@@ -16,7 +16,7 @@ public class SelectLineActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_line);
         line1 = findViewById(R.id.line1);
-//        line2 = findViewById(R.id.line2);
+        line2 = findViewById(R.id.line2);
 //        line3 = findViewById(R.id.line3);
 
         line1.setOnClickListener(new View.OnClickListener() {
@@ -27,13 +27,13 @@ public class SelectLineActivity extends AppCompatActivity {
             }
         });
 
-//        line2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(SelectLineActivity.this, SelectDirectionLine2Activity.class);
-//                startActivity(i);
-//            }
-//        });
+        line2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SelectLineActivity.this, SelectDirectionLine2Activity.class);
+                startActivity(i);
+            }
+        });
 //
 //        line3.setOnClickListener(new View.OnClickListener() {
 //            @Override

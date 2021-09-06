@@ -15,12 +15,16 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.squareup.picasso.Picasso;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -28,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListener;
     FirebaseUser user;
-    TextView textView;
+    TextView textView, textViewGreeting;
 
 
     private DrawerLayout mDrawerlayout;
@@ -50,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         mAuth=FirebaseAuth.getInstance();
         textView= (TextView) findViewById(R.id.textView);
+        textViewGreeting = findViewById(R.id.textViewGreeting);
         mAuthListener =new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -58,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }
             }
         };
+
+
 
 
         mDrawerlayout =  findViewById(R.id.drawer);
@@ -74,10 +81,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.drawer_nav);
         View hview = navigationView.getHeaderView(0);
         TextView nav_user= (TextView) hview.findViewById(R.id.username);
+        ImageView user_profile = hview.findViewById(R.id.logo);
         user = FirebaseAuth.getInstance().getCurrentUser();
+
+        Calendar calendar = Calendar.getInstance();
+        int timeOfDay = calendar.get(Calendar.HOUR_OF_DAY);
+        String greeting = "";
+        if (timeOfDay >= 0 && timeOfDay < 12) {
+            greeting = "Good Morning";
+        } else if (timeOfDay >= 12 && timeOfDay < 16) {
+            greeting = "Good Afternoon";
+        } else if (timeOfDay >= 16 && timeOfDay < 21) {
+            greeting = "Good Evening";
+        } else if (timeOfDay >= 21 && timeOfDay < 24) {
+            greeting = "Good Night";
+        }
+
         if(user!=null){
             String name=user.getDisplayName();
-            nav_user.append("Hi, "+name);
+            nav_user.append("Hi, "+name+"!");
+            Picasso.get().load(user.getPhotoUrl()).into(user_profile);
+            textViewGreeting.setText(greeting+ ", "+"\n"+name+"!");
         }
 
 
@@ -163,6 +187,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             share.putExtra(Intent.EXTRA_TEXT, "Download Mumbai Metro App \n\nClick on this Link: bit.ly/MumbaiMetroApp");
 
             startActivity(Intent.createChooser(share, "Share link!"));
+        } else if (id == R.id.action_live_traffic) {
+            startActivity(new Intent(MainActivity.this, LiveTrafficActivity.class));
+        } else if (id == R.id.action_emergency) {
+            Toast.makeText(MainActivity.this, "Emergency Contacts", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this, EmergencyActivity.class));
         }
         if(mToggle.onOptionsItemSelected(item)){
             return true;
@@ -186,6 +215,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(this, "Contact Us", Toast.LENGTH_SHORT).show();
                 Intent contact = new Intent(MainActivity.this,ContactActivity.class);
                 startActivity(contact);
+                break;
+            case R.id.Rewards:
+                Toast.makeText(this, "Metro Rewards", Toast.LENGTH_SHORT).show();
+                Intent rewards = new Intent(MainActivity.this,MetroRewardsActivity.class);
+                startActivity(rewards);
                 break;
             case R.id.signOut:
                 FirebaseAuth.getInstance().signOut();

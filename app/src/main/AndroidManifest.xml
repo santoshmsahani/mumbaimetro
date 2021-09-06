@@ -3,7 +3,7 @@
     package="com.sahanidevelopers.mumbaimetro">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -13,18 +13,35 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.sahanidevelopers.mumbaimetro.ContactActivity"
+        <activity
+            android:name=".EmergencyActivity"
+            android:exported="true"
+            android:label="Emergency Contacts"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".MetroRewardsActivity"
+            android:exported="true"
+            android:label="Metro Rewards"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".LiveTrafficActivity"
+            android:exported="true"
+            android:label="Live Traffic Status"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ContactActivity"
             android:label="Contact Us"
-            android:parentActivityName="com.sahanidevelopers.mumbaimetro.MainActivity">
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.sahanidevelopers.mumbaimetro.AboutUsActivity"
+        <activity
+            android:name=".AboutUsActivity"
             android:label="About Us"
-            android:parentActivityName="com.sahanidevelopers.mumbaimetro.MainActivity">
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,9 +49,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sahanidevelopers.mumbaimetro.SelectLocationLine3Activity"
+            android:name=".SelectLocationLine3Activity"
             android:label="You are at?"
-            android:parentActivityName="com.sahanidevelopers.mumbaimetro.SelectDirectionLine3Activity">
+            android:parentActivityName=".SelectDirectionLine3Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,9 +59,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sahanidevelopers.mumbaimetro.SelectDirectionLine3Activity"
+            android:name=".SelectDirectionLine3Activity"
             android:label="Select Direction"
-            android:parentActivityName="com.sahanidevelopers.mumbaimetro.SelectLineActivity">
+            android:parentActivityName=".SelectLineActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -52,9 +69,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sahanidevelopers.mumbaimetro.SelectLocationLine2Activity"
+            android:name=".SelectLocationLine2Activity"
             android:label="You are at?"
-            android:parentActivityName="com.sahanidevelopers.mumbaimetro.SelectDirectionLine2Activity">
+            android:parentActivityName=".SelectDirectionLine2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -62,9 +79,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sahanidevelopers.mumbaimetro.SelectDirectionLine2Activity"
+            android:name=".SelectDirectionLine2Activity"
             android:label="Select Direction"
-            android:parentActivityName="com.sahanidevelopers.mumbaimetro.SelectLineActivity">
+            android:parentActivityName=".SelectLineActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -72,9 +89,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sahanidevelopers.mumbaimetro.SelectLineActivity"
+            android:name=".SelectLineActivity"
             android:label="Select Line"
-            android:parentActivityName="com.sahanidevelopers.mumbaimetro.MainActivity">
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -82,7 +99,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sahanidevelopers.mumbaimetro.ScheduleLine1Activity"
+            android:name=".ScheduleLine1Activity"
             android:label="Train Schedule">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -91,9 +108,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sahanidevelopers.mumbaimetro.SelectLocationLine1Activity"
+            android:name=".SelectLocationLine1Activity"
             android:label="You are at?"
-            android:parentActivityName="com.sahanidevelopers.mumbaimetro.SelectDirectionLine1Activity">
+            android:parentActivityName=".SelectDirectionLine1Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -101,9 +118,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sahanidevelopers.mumbaimetro.SelectDirectionLine1Activity"
+            android:name=".SelectDirectionLine1Activity"
             android:label="Select Direction"
-            android:parentActivityName="com.sahanidevelopers.mumbaimetro.SelectLineActivity">
+            android:parentActivityName=".SelectLineActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -111,9 +128,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sahanidevelopers.mumbaimetro.FareListActivity"
+            android:name=".FareListActivity"
             android:label="Fare and Route"
-            android:parentActivityName="com.sahanidevelopers.mumbaimetro.FareActivity">
+            android:parentActivityName=".FareActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -121,9 +138,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sahanidevelopers.mumbaimetro.FareActivity"
+            android:name=".FareActivity"
             android:label="Fare and Route"
-            android:parentActivityName="com.sahanidevelopers.mumbaimetro.MainActivity">
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -131,9 +148,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sahanidevelopers.mumbaimetro.MapsActivity"
+            android:name=".MapsActivity"
             android:label="Maps"
-            android:parentActivityName="com.sahanidevelopers.mumbaimetro.MainActivity">
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -141,9 +158,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sahanidevelopers.mumbaimetro.RechargeActivity"
+            android:name=".RechargeActivity"
             android:label="Metro Card Recharge"
-            android:parentActivityName="com.sahanidevelopers.mumbaimetro.MainActivity">
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -151,7 +168,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sahanidevelopers.mumbaimetro.LoginActivity"
+            android:name=".LoginActivity"
             android:label="Sign In">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -159,14 +176,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.sahanidevelopers.mumbaimetro.SplashScreenActivity">
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.sahanidevelopers.mumbaimetro.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

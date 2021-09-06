@@ -16,6 +16,7 @@ public class ScheduleLine1Activity extends AppCompatActivity {
 
     ListView listView;
 
+    ListViewAdapter listViewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,155 +39,133 @@ public class ScheduleLine1Activity extends AppCompatActivity {
             case 0:
                 if (direction.equals("versova")){
                     String[] stations = getResources().getStringArray(R.array.ghatkopar_to_versova);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 if (direction.equals("ghatkopar")){
                     String[] stations = getResources().getStringArray(R.array.versova_to_ghatkopar);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 break;
             case 1:
                 if (direction.equals("versova")){
                     String[] stations = getResources().getStringArray(R.array.jagrutinagar_to_versova);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 if (direction.equals("ghatkopar")){
                     String[] stations = getResources().getStringArray(R.array.dnnagar_to_ghatkopar);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 break;
             case 2:
                 if (direction.equals("versova")){
                     String[] stations = getResources().getStringArray(R.array.asalpha_to_versova);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 if (direction.equals("ghatkopar")){
                     String[] stations = getResources().getStringArray(R.array.azadnagar_to_ghatkopar);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 break;
             case 3:
                 if (direction.equals("versova")){
                     String[] stations = getResources().getStringArray(R.array.sakinaka_to_versova);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 if (direction.equals("ghatkopar")){
                     String[] stations = getResources().getStringArray(R.array.andheri_to_ghatkopar);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 break;
             case 4:
                 if (direction.equals("versova")){
                     String[] stations = getResources().getStringArray(R.array.marolnaka_to_versova);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 if (direction.equals("ghatkopar")){
                     String[] stations = getResources().getStringArray(R.array.westernexp_to_ghatkopar);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 break;
             case 5:
                 if (direction.equals("versova")){
                     String[] stations = getResources().getStringArray(R.array.airportroad_to_versova);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 if (direction.equals("ghatkopar")){
                     String[] stations = getResources().getStringArray(R.array.jbnagar_to_ghatkopar);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 break;
             case 6:
                 if (direction.equals("versova")){
                     String[] stations = getResources().getStringArray(R.array.jbnagar_to_versova);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 if (direction.equals("ghatkopar")){
                     String[] stations = getResources().getStringArray(R.array.airportroad_to_ghatkopar);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 break;
             case 7:
                 if (direction.equals("versova")){
                     String[] stations = getResources().getStringArray(R.array.westernexp_to_versova);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 if (direction.equals("ghatkopar")){
                     String[] stations = getResources().getStringArray(R.array.marolnaka_to_ghatkopar);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 break;
             case 8:
                 if (direction.equals("versova")){
                     String[] stations = getResources().getStringArray(R.array.andheri_to_versova);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 if (direction.equals("ghatkopar")){
                     String[] stations = getResources().getStringArray(R.array.sakinaka_to_ghatkopar);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 break;
             case 9:
                 if (direction.equals("versova")){
                     String[] stations = getResources().getStringArray(R.array.azadnagar_to_versova);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 if (direction.equals("ghatkopar")){
                     String[] stations = getResources().getStringArray(R.array.asalpha_to_ghatkopar);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 break;
             case 10:
                 if (direction.equals("versova")){
                     String[] stations = getResources().getStringArray(R.array.dnnagar_to_versova);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 if (direction.equals("ghatkopar")){
                     String[] stations = getResources().getStringArray(R.array.jagrutinagar_to_ghatkopar);
-                    List<String> staList = Arrays.asList(stations);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, staList);
-                    listView.setAdapter(adapter);
+                    listViewAdapter = new ListViewAdapter(this, stations);
+                    listView.setAdapter(listViewAdapter);
                 }
                 break;
 

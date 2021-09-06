@@ -15,6 +15,11 @@
         android:title="@string/contact" />
 
     <item
+        android:id="@+id/Rewards"
+        android:icon="@drawable/ic_rewards"
+        android:title="Metro Rewards"/>
+
+    <item
         android:id="@+id/signOut"
         android:icon="@drawable/ic_sign_out"
         android:title="@string/signout" />
